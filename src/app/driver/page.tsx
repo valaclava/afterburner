@@ -91,14 +91,14 @@ export default function Drive() {
   <div className="w-48 h-48">
     <img
       src="https://pbs.twimg.com/media/Glt9EvQbgAAoFED?format=jpg&name=large"
-      alt="InRequiem Logo"
+      alt="VΛCLV Logo"
       className="w-full h-full object-cover"
     />
   </div>
 
   {/* Branding */}
   <div>
-    <h1 className="text-3xl font-bold tracking-widest">InRequiem</h1>
+    <h1 className="text-3xl font-bold tracking-widest">VΛCLV</h1>
     <p className="text-gray-400 text-xs mt-1 uppercase">Sign-In to view this page</p>
   </div>
 
@@ -185,7 +185,7 @@ export default function Drive() {
     <div className='min-h-screen bg-black text-white p-6 sm:p-10'>
       <div className="max-w-4xl bg-black mx-auto text-center">
         <h1 className="text-4xl font-bold">{username} Profile</h1>
-        <p className="text-gray-400 mt-2">InRequiem</p>
+        <p className="text-gray-400 mt-2">VΛCLV</p>
         <div className=' flex flex-col items-center justify-center'>
           <div className='w-50 h-50 overflow-hidden border-4'>
             <img src={userImage} className=" w-full h-full object-cover " />

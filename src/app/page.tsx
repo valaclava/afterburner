@@ -13,12 +13,12 @@ const LandingPage = () => {
                     <img 
                         className="w-full max-w-[250px] sm:max-w-[300px] md:max-w-[400px] object-cover" 
                         src="https://pbs.twimg.com/media/Glt9EvQbgAAoFED?format=jpg&name=large" 
-                        alt="Monetron Logo" 
+                        alt="VΛCLV" 
                     />
                 </div>
 
                 {/* Branding */}
-                <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-widest">InRequiem</h1>
+                <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-widest">VΛCLV</h1>
                 <p className="text-gray-400 text-xs sm:text-sm mt-2 uppercase">Performance Telemetry without expensive sensors</p>
                 <p className="text-gray-400 text-xs sm:text-sm mt-2 uppercase">just your smartphone</p>
 

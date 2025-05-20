@@ -19,14 +19,14 @@ async function LandingPage() {
   <div className="w-48 h-48">
     <img
       src="https://pbs.twimg.com/media/Glt9EvQbgAAoFED?format=jpg&name=large"
-      alt="InRequiem Logo"
+      alt="VΛCLV Logo"
       className="w-full h-full object-cover"
     />
   </div>
 
   {/* Branding */}
   <div>
-    <h1 className="text-3xl font-bold tracking-widest">InRequiem</h1>
+    <h1 className="text-3xl font-bold tracking-widest">VΛCLV</h1>
     <p className="text-gray-400 text-xs mt-1 uppercase">Sign-In to view this page</p>
   </div>
 
@@ -56,11 +56,11 @@ async function LandingPage() {
           <p className="text-gray-600 mt-2">God Speed</p>
         </div>
         <div className="mb-6">
-          <img src="https://pbs.twimg.com/media/Glt9EvQbgAAoFED?format=jpg&name=large" alt="InRequiem Logo" className="max-w object-covered" />
+          <img src="https://pbs.twimg.com/media/Glt9EvQbgAAoFED?format=jpg&name=large" alt="VΛCLV Logo" className="max-w object-covered" />
         </div>
 
         {/* Branding */}
-        <h1 className="text-3xl font-bold tracking-widest">InRequiem</h1>
+        <h1 className="text-3xl font-bold tracking-widest">VΛCLV</h1>
         <p className="text-gray-400 text-sm mt-2 uppercase">Personalized Telemetry without expensive sensors</p>
         <p className="text-gray-400 text-sm mt-2 uppercase">just your smartphone</p>
 

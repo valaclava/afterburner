@@ -5,7 +5,7 @@ const GuidePage = () => {
   return (
     <div className="min-h-screen bg-black text-white p-6 sm:p-10">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold text-center mb-6">InRequiem Guide</h1>
+        <h1 className="text-4xl font-bold text-center mb-6">VΛCLV Guide</h1>
         
         {/* <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-2">Getting Started</h2>
@@ -32,8 +32,8 @@ const GuidePage = () => {
         <section className="mb-8 border-t border-gray-700 pt-6">
           <h2 className="text-2xl font-semibold mb-2">Join the Crew</h2>
           <p>
-            InRequiem is more than a brand—it’s a culture. Whether you're a racer, artist, or innovator. 
-            Follow us on <a href="https://x.com/InRequiemX">X @InRequiemX</a> and stay ahead of the curve.
+            VΛCLV is more than a brand—it’s a culture. Whether you're a racer, artist, or innovator. 
+            Follow us on <a href="https://x.com/valaclavahq">X @valaclavahq</a> and stay ahead of the curve.
           </p>
         </section>
       </div>

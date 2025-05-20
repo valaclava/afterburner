@@ -176,7 +176,7 @@ function Telemetry() {
     return (
         <>
             <fieldset className="border p-4 flex justify-center">
-                <legend className="font-bold text-lg px-2">InRequiem</legend>
+                <legend className="font-bold text-lg px-2">VΛCLV</legend>
 
                 <div className="p-4 text-center w-full max-w-md mx-auto">
                     {/* Enlarged Speed Block as a Square */}

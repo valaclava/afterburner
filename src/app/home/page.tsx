@@ -24,7 +24,7 @@ export default function LandingPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            InRequiem Telemetry
+            VΛCLV Telemetry
           </motion.h1>
           <motion.p
             className="text-gray-300 mt-4 text-xl sm:text-lg max-w-full sm:max-w-2xl mx-auto"
@@ -32,7 +32,7 @@ export default function LandingPage() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 1 }}
           >
-            We are InRequiem Telemetry — part of the InRequiem ecosystem, where racing meets data. We’re passionate about performance, whether on the track or in the virtual world.
+            VΛCLV-Telemetry is a part of the valaclava ecosystem, where racing meets data. We’re passionate about performance, whether on the track or in the virtual world.
 
             Born from a love for speed and powered by technology, we transform your smartphone into a telemetry tool, tracking everything from speed to acceleration in real-time.
           </motion.p>
@@ -46,7 +46,7 @@ export default function LandingPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            Telemetry Synthesized by InRequiem
+            Telemetry Synthesized by valaclava
           </motion.h2>
 
           <motion.p

@@ -7,7 +7,7 @@ const TermsPage = () => {
 
       <section className="mb-6">
         <h2 className="text-xl font-semibold">1. Introduction</h2>
-        <p>Welcome to InRequiem's telemetry service. By using our services, you agree to these terms. Please read them carefully.</p>
+        <p>Welcome to valaclava's telemetry service. By using our services, you agree to these terms. Please read them carefully.</p>
       </section>
 
       <section className="mb-6">
@@ -45,7 +45,7 @@ const TermsPage = () => {
       <section className="mb-6">
         <h2 className="text-xl font-semibold">5. Contact Us</h2>
         <p>If you have any questions about these terms, please contact us at  
-           <a href="https://x.com/inrequiemx" className="text-blue-500 hover:underline"> Contact Us</a>.
+           <a href="https://x.com/valaclavahq" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline"> Contact Us</a>.
         </p>
       </section>
     </main>
