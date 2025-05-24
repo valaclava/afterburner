@@ -50,79 +50,86 @@ export default function Crew() {
   if (!user?.id) {
     return (
       <div className="flex flex-col items-center justify-center min-h-screen bg-black text-white px-4 text-center space-y-6">
-  {/* Logo */}
-  <div>
-    <h1 className="text-4xl font-extrabold tracking-wider">Crew</h1>
-    <p className="text-gray-400 mt-2 text-sm">Fast life</p>
-  </div>
+        {/* Logo */}
+        <div>
+          <h1 className="text-4xl font-extrabold ">Crew</h1>
+          <p className="text-gray-400 mt-2 text-sm">Fast life</p>
+        </div>
 
-  <div className="w-48 h-48">
-    <img
-      src="https://pbs.twimg.com/media/Glt9EvQbgAAoFED?format=jpg&name=large"
-      alt="VΛCLV Logo"
-      className="w-full h-full object-cover"
-    />
-  </div>
+        <div className="w-48 h-48">
+          <img
+            src="https://pbs.twimg.com/media/Glt9EvQbgAAoFED?format=jpg&name=large"
+            alt="VΛCLV Logo"
+            className="w-full h-full object-cover"
+          />
+        </div>
 
-  {/* Branding */}
-  <div>
-    <h1 className="text-3xl font-bold tracking-widest">VΛCLV</h1>
-    <p className="text-gray-400 text-xs mt-1 uppercase">Sign-In to view this page</p>
-  </div>
+        {/* Branding */}
+        <div>
+          <h1 className="text-3xl font-bold ">VΛCLV</h1>
+          <p className="text-gray-400 text-xs mt-1 uppercase">Sign-In to view this page</p>
+        </div>
 
-  {/* Sign-in Button */}
-  <SignedOut>
-    <SignInButton>
-      <button className="mt-2 px-6 py-3 border border-white text-black bg-white hover:bg-gray-300 transition rounded">
-        Sign In
-      </button>
-    </SignInButton>
-  </SignedOut>
+        {/* Sign-in Button */}
+        <SignedOut>
+          <SignInButton>
+            <button className="mt-2 px-6 py-3 border border-white text-black bg-white hover:bg-gray-300 transition rounded">
+              Sign In
+            </button>
+          </SignInButton>
+        </SignedOut>
 
-  {/* Footer */}
-  <div className="absolute bottom-4 w-full">
-    <Footer />
-  </div>
-</div>
+        {/* Footer */}
+      </div>
     );
   }
 
   // Sort tasks by peak speed (highest first) and assign rank
   const sortedTasks = [...tasks].sort((a, b) => b.peak - a.peak);
 
+  // Function to convert kmph to mph
+  const kmphToMph = (kmph: number) => {
+    return Math.round(kmph * 0.621371);
+  };
+
   return (
-    <>
-      <div className="text-center">
+    <div className='min-h-screen bg-black text-white p-6 sm:p-10'>
+      <div className="max-w-4xl bg-black mx-auto text-center">
         <h1 className="text-3xl font-bold">Crew</h1>
         <p className="text-gray-600 mt-2">Fast life</p>
         {loading && <p>fetching...</p>}
-      </div>
 
-      <div className="mt-8">
-        <h2 className="text-2xl font-bold mb-4">Crew Ranking</h2>
+        <div className="mt-8">
+          <h2 className="text-2xl font-bold mb-4">Crew Ranking</h2>
 
-        <div className="overflow-x-auto">
-          <table className="w-full border-collapse border border-gray-600">
-            <thead>
-              <tr className="bg-gray-700">
-                <th className="border border-gray-600 px-4 py-2">Rank</th>
-                <th className="border border-gray-600 px-4 py-2">Rider</th>
-                <th className="border border-gray-600 px-4 py-2">Peak</th>
-              </tr>
-            </thead>
-            <tbody>
-              {!loading && sortedTasks.length > 0 && sortedTasks.map((task, index) => (
-                <tr key={task.id} className="text-center hover:bg-gray-800">
-                  <td className="border border-gray-600 px-4 py-2">#{index + 1}</td>
-                  <td className="border border-gray-600 px-4 py-2">{task.name}</td>
-                  <td className="border border-gray-600 px-4 py-2">{task.peak} kmph</td>
+          <div className="overflow-x-auto">
+            <table className="w-full border-collapse border border-gray-600">
+              <thead>
+                <tr className="bg-gray-700">
+                  <th className="border border-gray-600 px-4 py-2">Rank</th>
+                  <th className="border border-gray-600 px-4 py-2">Rider</th>
+                  <th className="border border-gray-600 px-4 py-2">Peak</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {!loading && sortedTasks.length > 0 && sortedTasks.map((task, index) => (
+                  <tr key={task.id} className="text-center hover:bg-gray-800">
+                    <td className="border border-gray-600 px-4 py-2">#{index + 1}</td>
+                    <td className="border border-gray-600 px-4 py-2">{task.name}</td>
+                    <td className="border border-gray-600 px-4 py-2">
+                      <div className="flex flex-col">
+                        <span className="text-xl ">{task.peak} kmph</span>
+                        <span className="text-sm text-gray-400">{kmphToMph(task.peak)} mph</span>
+                      </div>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
       <Footer />
-    </>
+    </div>
   );
 }

@@ -2,7 +2,7 @@
 const Footer = () => {
   return (
     <footer className="text-center p-4 bg-black text-white text-sm">
-      <p>© {new Date().getFullYear()} Telemetry | Synthesized by valaclava</p>
+      <p>© {new Date().getFullYear()} Afterburner | telemetry system by valaclava</p>
       <nav className="mt-2">
         <a href="/about" className="text-blue-400 hover:underline mx-2">About</a> |
         <a href="/terms" className="text-blue-400 hover:underline mx-2">Terms</a> |
