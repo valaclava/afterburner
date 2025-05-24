@@ -4,8 +4,6 @@ import { SignedOut, SignInButton, useSession, useUser } from '@clerk/nextjs'
 import { createClient } from '@supabase/supabase-js'
 import Footer from '../components/Footer'
 
-
-
 export default function Drive() {
   const [tasks, setTasks] = useState<any[]>([])
   const [rank, setRank] = useState<any[]>([])
@@ -15,11 +13,12 @@ export default function Drive() {
   const { user } = useUser()
   const { session } = useSession()
 
+  // Function to convert kmph to mph
+  const kmphToMph = (kmph: number) => {
+    return Math.round(kmph * 0.621371);
+  };
+
   // Protect the route by checking if the user is signed in
-
-
-  // Get the Backend API User object when you need access to the user's information
-
   const username = user?.username + "'s";
   const userImage = user?.imageUrl;
 
@@ -84,7 +83,7 @@ export default function Drive() {
       <div className="flex flex-col items-center justify-center min-h-screen bg-black text-white px-4 text-center space-y-6">
   {/* Logo */}
   <div>
-    <h1 className="text-4xl font-extrabold tracking-wider">Driver's Profile</h1>
+    <h1 className="text-4xl font-extrabold ">Driver's Profile</h1>
     <p className="text-gray-400 mt-2 text-sm">Fast life</p>
   </div>
 
@@ -98,7 +97,7 @@ export default function Drive() {
 
   {/* Branding */}
   <div>
-    <h1 className="text-3xl font-bold tracking-widest">VΛCLV</h1>
+    <h1 className="text-3xl font-bold ">VΛCLV</h1>
     <p className="text-gray-400 text-xs mt-1 uppercase">Sign-In to view this page</p>
   </div>
 
@@ -110,11 +109,6 @@ export default function Drive() {
       </button>
     </SignInButton>
   </SignedOut>
-
-  {/* Footer */}
-  <div className="absolute bottom-4 w-full">
-    <Footer />
-  </div>
 </div>
     )
   }
@@ -221,7 +215,10 @@ export default function Drive() {
           <div className="mt-6 grid grid-cols-2 gap-6 text-lg">
             <div className="p-4 rounded-lg">
               <h2 className="text-xl font-semibold">Peak</h2>
-              <p className="text-4xl font-bold">{task.peak} kmph</p>
+              <div className="flex flex-col">
+                <p className="text-4xl font-bold">{task.peak} kmph</p>
+                <p className="text-xl text-gray-400">{kmphToMph(task.peak)} mph</p>
+              </div>
             </div>
             <div className="p-4 rounded-lg">
               <h2 className="text-xl font-semibold">Rank</h2>

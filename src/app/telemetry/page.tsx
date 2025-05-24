@@ -182,12 +182,18 @@ function Telemetry() {
                     {/* Enlarged Speed Block as a Square */}
                     <fieldset className="border text-white w-full h-48 sm:w-64 sm:h-64 flex flex-col items-center justify-center mx-auto">
                         <legend className="font-bold text-xl px-2">Speed</legend>
-                        <p className="text-5xl font-extrabold">{speed} kmph</p>
+                        <div className="flex flex-col items-center">
+                            <p className="text-5xl font-extrabold">{speed} kmph</p>
+                            <p className="text-2xl text-gray-400 font-bold">{Math.round(speed * 0.621371)} mph</p>
+                        </div>
                     </fieldset>
 
                     <fieldset className="border p-4 mt-4">
                         <legend className="font-bold">Top Speed</legend>
-                        <h1 className="text-2xl">{topSpeed} kmph</h1>
+                        <div className="flex flex-col items-center">
+                            <h1 className="text-2xl">{topSpeed} kmph</h1>
+                            <p className="text-lg text-gray-400 font-bold">{Math.round(topSpeed * 0.621371)} mph</p>
+                        </div>
                     </fieldset>
 
                     <fieldset className="border p-4 mt-4">
@@ -197,7 +203,10 @@ function Telemetry() {
 
                     <fieldset className="border p-4 mt-4">
                         <legend className="font-bold">Distance</legend>
-                        <h1 className="text-2xl">{distance.toFixed(2)} km</h1>
+                        <div className="flex flex-col items-center">
+                            <h1 className="text-2xl">{distance.toFixed(2)} km</h1>
+                            <p className="text-lg text-gray-400 font-bold">{(distance * 0.621371).toFixed(2)} miles</p>
+                        </div>
                     </fieldset>
                 </div>
             </fieldset>
